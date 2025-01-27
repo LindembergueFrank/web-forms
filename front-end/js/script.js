@@ -1,14 +1,14 @@
 const formulario = document.querySelector("#form-web");
 
 formulario.addEventListener("submit", function (event) {
-    event.preventDefault(); // Previne o comportamento padrão do formulário
+    event.preventDefault(); 
 
-    const formData = new FormData(formulario); // Cria uma instância de FormData com o formulário
+    const formData = new FormData(formulario); 
 
-    // Validação básica do arquivo (verifica tipo e tamanho)
+
     const resumeFile = formData.get("resume");
     const allowedExtensions = [".doc", ".docx", ".pdf"];
-    const maxSize = 1 * 1024 * 1024; // 1MB
+    const maxSize = 1 * 1024 * 1024; 
 
     if (resumeFile) {
         const fileExtension = resumeFile.name.split('.').pop().toLowerCase();
@@ -22,7 +22,7 @@ formulario.addEventListener("submit", function (event) {
         }
     }
 
-    // Criando o objeto com os dados do formulário
+
     const data = {
         name: formData.get("name"),
         email: formData.get("email"),
@@ -30,14 +30,14 @@ formulario.addEventListener("submit", function (event) {
         desiredPosition: formData.get("desired-position"),
         education: formData.get("education"),
         observations: formData.get("observations") || null,
-        resume: resumeFile // O arquivo será enviado em FormData no backend
+        resume: resumeFile 
     };
 
     console.log(data);
 
     fetch("http://localhost:8080/form", {
         method: "POST",
-        body: formData, // FormData para enviar arquivos
+        body: formData, 
     })
         .then((response) => {
             if (!response.ok) {
