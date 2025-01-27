@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Web Forms</title>
+</head>
+<body>
+    
+    <main class="form-container">
+        <div class="form-header">
+            <h1 id="form-title">Formulário Web</h1>
+        </div>
+
+        <form id="form-web">
+            <div class="input-container">
+                <div class="input-box">
+                    <label for="name" class="form-label">Nome e Sobrenome</label>
+                    <div class="input-field">
+                        <input type="text" name="name" id="name" placeholder="Digite seu nome e sobrenome" class="form-control">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="input-container">
+                <div class="input-box">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-field">
+                        <input type="email" name="email" id="email" placeholder="exemplo@email.com" class="form-control">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="input-container">
+                <div class="input-box">
+                    <label for="phone" class="form-label">Telefone</label>
+                    <div class="input-field">
+                        <input type="tel" name="phoneNumber" id="phone" placeholder="(DDD) 9 9999-9999" class="form-control">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="input-container">
+                <div class="input-box">
+                    <label for="desired-position" class="form-label">Cargo Desejado</label>
+                    <div class="input-field">
+                        <input type="text" name="desired-position" id="desired-position" placeholder="Informe o cargo desejado" class="form-control">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="input-container full-width">
+                <div class="input-box">
+                    <label for="education" class="form-label">Escolaridade</label>
+                    <div class="input-field">
+                        <select name="education" id="education" class="form-control">
+                            <option value="">Selecione sua escolaridade</option>
+                            <option value="fundamental">Ensino fundamental completo</option>
+                            <option value="medio">Ensino médio incompleto</option>
+                            <option value="medio">Ensino médio completo</option>
+                            <option value="superior">Ensino superior incompleto</option>
+                            <option value="superior">Ensino superior completo</option>
+                            <option value="pos">Pós-graduação</option>
+                        </select>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="input-container full-width">
+                <div class="input-box">
+                    <label for="observations" class="form-label">Observações</label>
+                    <div class="input-field">
+                        <textarea name="observations" id="observations" placeholder="Adicione observações, se necessário" class="form-control"></textarea>
+                        <i class="fa-regular fa-comment"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="input-container full-width">
+                <div class="input-box">
+                    <label for="resume" class="form-label">Anexar Currículo</label>
+                    <div class="input-field">
+                        <input type="file" name="resume" id="resume" class="form-control" required accept=".doc,.docx,.pdf">
+                        <i class="fa-regular fa-file"></i>
+                    </div>
+                </div>
+            </div>
+        
+            <button type="submit"> Enviar
+                <i class="fa-solid fa-check"></i>
+            </button>
+        </form>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
