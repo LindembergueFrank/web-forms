@@ -1,7 +1,7 @@
 package com.lindemberguefrank.formulario_web.model;
 
 import java.time.LocalDateTime;
-
+import javax.validation.constraints.*;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,18 +22,23 @@ public class User {
     private Long id;
 
     @Column(name = "name", length = 255, nullable = true)
+    @NotBlank(message = "O nome completo é obrigatório.")
     private String nome;
     
     @Column(name = "email", length = 50, nullable = true)
+    @Email(message = "E-mail inválido.")
     private String email;
 
     @Column(name = "phone_number", length = 20, nullable = true)
+    @NotBlank(message = "O telefone é obrigatório.")
     private String telefone;
 
     @Column(name = "desired_position", length = 100, nullable = true)
+    @NotBlank(message = "A posição desejada é obrigatória.")
     private String cargoDesejado;
 
     @Column(name = "education", length = 50, nullable = true)
+    @NotBlank(message = "A escolaridade é obrigatória.")
     private String escolaridade;
 
     @Column(name = "observations", columnDefinition = "TEXT")
