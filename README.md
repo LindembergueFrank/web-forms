@@ -8,8 +8,8 @@ Projeto de estudo full stack para **envio e persistência de formulários**, com
 
 ### Backend
 
-- Java
-- Spring Boot
+- Java 21
+- Spring Boot 3.4.2
 - Spring Data JPA
 - Maven
 - PostgreSQL
@@ -63,7 +63,7 @@ docker compose up -d
 
 ## Executando o backend
 
-Na raiz do projeto, forneça as variáveis de ambiente ao processo Java. Exemplo em Linux/macOS:
+Na raiz do projeto, forneça as variáveis de ambiente ao processo Java. O projeto inclui Maven Wrapper; no Windows, utilize `mvnw.cmd spring-boot:run`. Exemplo em Linux/macOS:
 
 ```bash
 export DB_URL=jdbc:postgresql://localhost:5432/forms-web-db
